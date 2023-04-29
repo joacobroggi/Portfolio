@@ -1,0 +1,780 @@
+
+
+
+    
+.landing {
+    height: 100vh;
+    background-image: url('../../img/landingBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.txtLanding {
+    padding-top: 13.5%;
+    margin-left: 7%;
+
+    
+}
+.h1Container {
+    width: 35%;
+   
+}
+h1 {
+    text-transform: uppercase;
+    font-family: var(--fuente);
+    color: #FFFF;
+    width: 15%;
+    line-height: 55px;
+    margin-bottom: 0.5%;
+}
+
+.joaco {
+    font-size: 3rem;
+    height: 0;
+    transition: 0.2s;
+    font-weight: 400;
+    width: 100%;
+}
+
+.broggi {
+    font-size: 4.5rem;
+    font-weight: 600;
+   transition: 0.2s;
+   width: 100%;
+}
+
+.h3Landing {
+    color: #FFFF;
+    font-family: var(--fuente);
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 1%;
+}
+.botonesLanding {
+    align-self: center;
+    width: 27%;
+    display: flex;
+    /* background-color: #46C2CB; */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+.landingBtn {
+    
+    border: 1px solid #FFFF;
+    color: #FFFF;
+    background-color: transparent;
+    padding: 3% 5%;
+    font-size: 1rem;
+    border-radius: 20px;
+    font-family: var(--fuente);
+    font-weight: 300;
+    transition: 0.3s;
+}
+.landingBtn:hover {
+    cursor: pointer;
+    /* border: 1px solid #FFFF; */
+    color: #000;
+    background-color: white;
+    padding: 3% 5%;
+
+    border-radius: 20px;
+    font-family: var(--fuente);
+    font-weight: 300;
+
+}
+.landingBtn2 {
+    transition: 0.3s;
+    border: 1px solid transparent;
+    background-color: var(--color1);
+    color: white;
+    padding: 3% 5%;
+    font-size: 1rem;
+    border-radius: 20px;
+    font-family: var(--fuente);
+    font-weight: 400;
+    opacity: 90%;
+}
+.landingBtn2:hover {
+    cursor: pointer;
+    opacity: 100%;
+    border: 1px solid transparent;
+    background-color: var(--color1);
+    color: white;
+}
+
+.redesLanding {
+    display: flex;
+    margin-right: 4.5%;
+    width: 12vw;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-bottom: 1.5%;
+}
+.icon {
+    color: white;
+    font-size: 1.5rem;
+   transition: 0.3s;
+}
+.icon:hover {
+    color: var(--color1);
+    cursor: pointer;
+   
+}
+
+
+
+
+
+/* ABOUT */
+.about {
+    min-height: 100vh;
+    display: flex;
+    background: rgb(15,14,14);
+background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
+   
+    background-attachment: fixed;
+    margin: 0 0;
+}
+.txtAbout {
+    padding-top: 1%;
+    padding-left: 7%;
+    width: 55%;
+}
+.h2About {
+    color: #FFFF;
+    font-family: var(--fuente);
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  
+    margin-bottom: 1%;
+}
+.aAbout {
+    font-size: 1.1rem;
+    color: #FFFF;
+    text-decoration: none;
+    font-family: var(--fuente);
+    font-weight: 400;
+    transition: 0.2s;
+}
+.aAbout:hover {
+  color: var(--color1);
+}
+.pAbout {
+    color: #FFFF;
+    font-family: var(--fuente);
+    font-size: 1rem;
+    width: 75%;
+    font-weight: 300;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+.imgContainerAbout {
+    min-height: 100vh;
+    width: 50vw;
+    background-position:center;
+    background-image: url('../../img/JOACO.jpg');
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: flex-end;
+}
+.imgContainerAbout2 {
+    min-height: 100vh;
+    width: 50vw;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../img/JOACO2.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.imgAbout {
+    height: 100%;
+}
+.h4About {
+    font-family: 'M PLUS 2';
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: white;
+}
+.circles {
+    display: flex;
+    justify-content: space-between;
+    width: 4.5vw;
+    
+}
+
+.circle {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    outline: 1px solid white;
+    transition: 0.3s;
+    margin-bottom: 20%;
+}
+.circleA:hover {
+  cursor: pointer;
+  background-color: white;
+}
+.circleA {
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    outline: 1px solid white;
+    transition: 0.3s;
+    margin-bottom: 20%;
+}
+
+.cv {
+  background-color: var(--color1);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 3% 4%;
+  color: white;
+  font-family: var(--fuente);
+  transition: 0.5s;
+  font-size: 1rem;
+  opacity: 90%;
+  font-weight: 400;
+}
+.cv:hover {
+  cursor: pointer;
+  opacity: 100%;
+  background-color: transparent;
+    border: 1px solid var(--color1);
+}
+.b {
+  transition: 0.4s;
+}
+.b:hover {
+  color: var(--color1);
+  letter-spacing: 0.2px;
+ 
+}
+.workbutton {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 3% 4%;
+  color: white;
+  font-family: var(--fuente);
+  font-size: 1rem;
+  opacity: 90%;
+  font-weight: 400;
+  transition: 0.5s;
+}
+.workbutton:hover {
+  cursor: pointer;
+  opacity: 100%;
+  background-color: white;
+  color: black;
+}
+.tecnologias {
+ margin-bottom: 4%;
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  
+  flex-wrap: wrap;
+}
+.tecnologia {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+.h5Tecnologias {
+  margin: 0 0;
+  font-size: 1rem;
+  color: white;
+  font-family: var(--fuente);
+  font-weight: 400;
+}
+.tecnoIcon {
+  width: 2.5vw;
+  margin-bottom: 2%;
+}
+.aboutA {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: var(--fuente);
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+
+}
+.aboutButtons {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  padding-bottom: 2.5%;
+}
+
+
+
+/* PROYECTOS */
+.proyectos {
+  height: 100vh;
+  margin: 0 0;
+}
+.flechaIzq {
+  position: absolute;
+  top: 280%;
+  margin-left: 2%;
+  color: white;
+  font-size: 2rem;
+}
+.flechaIzq:hover {
+  cursor: pointer;
+}
+.flechaDer {
+  position: absolute;
+  top: 280%;
+  left: 96.5%;
+  color: white;
+  font-size: 2rem;
+}
+.flechaDer:hover {
+  cursor: pointer;
+}
+.proyecto {
+  height: 100%;
+  margin: 0 0;
+  display: flex;
+  align-items: center;
+}
+.vapearg {
+  background-image: url('../../img/vapearg.png');
+  background-size: cover;
+  background-position: center;
+  -webkit-animation: fade-in 1.2s;
+  animation: fade-in 1.2s;
+}
+.clima {
+  background-image: url('../../img/lluvia.jpg');
+  
+  background-size: cover;
+  background-position: center;
+}
+.album {
+  background-image: url('../../img/album.jpg');
+  
+  background-size: cover;
+  background-position: center;
+}
+.txtProyectos {
+ margin-left: 7%;
+}
+
+.h2Proyectosvapearg {
+  color: #FFFF;
+  font-family: var(--chango);
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5%;
+  margin-top: 0;
+}
+.h2Proyectosalbum {
+  color: #FFFF;
+  font-family: var(--nerko);
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5%;
+  margin-top: 0;
+}
+.h2Proyectosvapearg:hover {
+  cursor: pointer;
+}
+
+.h2Proyectosclima {
+  color: #FFFF;
+  font-family: var(--fuente);
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1%;
+}
+.h2Proyectosclima:hover {
+  cursor: pointer;
+}
+.com {
+  font-size: 1.5rem;
+  font-family: var(--fuente);
+  text-transform: lowercase;
+  font-weight: 400;
+}
+.com2 {
+  font-size: 1.5rem;
+  font-family: var(--fuente);
+  text-transform: lowercase;
+  font-weight: 500;
+}
+.open {
+  font-family: var(--fuente);
+  font-size: 1.3rem;
+  text-transform: lowercase;
+}
+.h4Proyectos {
+  color: #FFFF;
+  font-family: var(--fuente);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  
+  
+  margin: 0 0;
+}
+
+.txtProyectos {
+  width: 45%;
+  margin-right: 5%;
+  
+}
+.derechaProyectos {
+  width: 45%;
+}
+.pProyectos {
+  color: white;
+  font-family: var(--fuente);
+  font-size: 1.1rem;
+  margin-top: 1%;
+  font-weight: 400;
+}
+.h5Proyectos {
+  font-family: var(--fuente);
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 1%;
+  margin-top: 6%;
+  font-weight: 500;
+}
+.pProyectos2 {
+  color: white;
+  font-family: var(--fuente);
+  font-size: 1.1rem;
+  
+  font-weight: 400;
+}
+.proyectosIframe {
+  width: 38vw;
+  border-radius: 20px;
+
+  height: 42vh;
+  /* margin-left: 1%; */
+  margin-right: 3%;
+  border: none;
+}
+.derechaProyectos {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.mobile {
+  display: none;
+}
+
+
+@media only screen and (max-width: 850px){
+	.mobile {
+    display: block;
+  }
+  .desk {
+    display: none;
+  }
+  .landingM {
+    background: url('../../img/landingBackground.jpg');
+    background-position: center;
+    background-size: cover;
+    height: var(--cien);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+    
+  }
+  .txtLanding {
+    margin-top: 30%;
+    width: 90%;
+  }
+  .botonesLanding {
+    width: 95%;
+    margin-top: 2%;
+  }
+  .h2Proyectosclima {
+    font-size: 2.5rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .redesLanding {
+
+    margin: 0 auto;
+    margin-bottom: 2.9%;
+    width: 30%;
+  }
+ .aboutM {
+  min-height: calc(var(--vh, 5vh) * 60);
+  background: rgb(15,14,14);
+    background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ }
+ .aboutH2M {
+  color: white;
+  font-size: 2.5rem;
+  font-family: var(--fuente);
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: var(--color1);
+  font-weight: 500;
+ }
+ .emailM {
+  color: white;
+  font-family: var(--fuente);
+  font-size: 1.3rem;
+ }
+ .txtAboutM {
+  margin-left: 7%;
+  width: 87%;
+ }
+ .aboutH2M {
+  padding-top: 5%;
+ }
+ .pAboutM {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 2%;
+  font-family: var(--fuente);
+ }
+ .pAboutM2 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: var(--fuente);
+  margin-top: 2%; 
+}
+ .tecnologias {
+  width: 100%;
+  margin-top: 5%;
+  gap: 5%;
+ }
+ .tecnoIcon {
+  height: calc(var(--vh, 5vh) * 5);
+  width: calc(var(--vh, 5vh) * 5);
+ }
+ .h5Tecnologias {
+  font-size: 1rem;
+ }
+ .botoneraM {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
+ }
+ .boton1M {
+  background-color: var(--color1);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 1% 1%;
+  width: 43%;
+  font-family: var(--fuente);
+  color: white;
+  font-size: 1rem;
+ }
+ .boton2M {
+  background-color:transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 4% 2%;
+  width: 55%;
+  font-family: var(--fuente);
+  color: white;
+  font-size: 1rem;
+ }
+ .flechaDer {
+  left: 91%;
+
+ }
+ .flechaIzq {
+  margin-left: 4%;
+
+ }
+ .proyectos {
+  /* min-height: var(--cien); */
+  margin: 0 0;
+  display: flex;
+  flex-direction: column;
+ }
+ .proyecto {
+  min-height: var(--cien);
+  width: 100%;
+  margin: 0 0;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+ }
+ .textPM {
+  width: 90%;
+ min-height: var(--cien);
+ }
+ .h2Proyectosvapearg {
+  font-size: 2.5rem;
+  margin-top: 2%;
+  text-align: center;
+ 
+ }
+ .h2Proyectosalbum {
+  font-size: 2.5rem;
+  margin-top: 2%;
+  text-align: center;
+ }
+ .pProyecto2 {
+  font-size: 1.2rem;
+ 
+ width: 95%;
+ margin-left: 5%;
+  font-weight: 400;
+  font-family: var(--fuente);
+  color: white;
+  text-align: left;
+  margin-top: 4%;
+ }
+ .h6proyectosM {
+  font-size: 1.3rem;
+  width: 95%;
+  margin-left: 5%;
+   font-weight: 500;
+   font-family: var(--fuente);
+   color: white;
+   text-align: left;
+   margin-top: 4%;
+   margin-bottom: 2%;
+ }
+ .pProyecto3 {
+  font-size: 1.2rem;
+ 
+  width: 95%;
+  margin-left: 5%;
+   font-weight: 400;
+   font-family: var(--fuente);
+   color: white;
+   text-align: left;
+ }
+ .flechasDiv {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+ }
+ .flechaIzqM {
+  font-size: 1.7rem;
+  color: white;
+ }
+ .flechaDerM {
+  font-size: 1.7rem;
+  color: white;
+ }
+ .sep {
+  height:  calc(var(--vh, 5vh) * 3);
+ }
+}
+
+@media only screen and (max-width: 390px){ 
+    .botonesLanding {
+      width: 100%;
+    }
+    
+    .landingBtn {
+      font-size: 0.9rem;
+    }
+    .landingBtn2 {
+      font-size: 0.9rem;
+    }
+    .aboutH2M {
+      font-size: 2.3rem;
+    }
+    .emailM {
+      font-size: 1.2rem;
+    }
+    .pAboutM {
+      font-size: 1rem;
+    }
+    .pAboutM2 {
+      font-size: 1rem;
+    }
+    .h5Tecnologias {
+      font-size: 0.9rem;
+    }
+    .boton1M {
+      font-size: 0.9rem;
+    }
+    .boton2M {
+      font-size: 0.9rem;
+    }
+    .proyectos {
+      min-height: var(--cien);
+    }
+    
+    .h2Proyectosvapearg {
+      font-size: 2rem;
+    }
+    .h2Proyectosalbum {
+      font-size: 2rem;
+      margin: 0 auto;
+    }
+    .pProyecto2 {
+      font-size: 1.1rem;
+    }
+    .h6proyectosM {
+      font-size: 1.2rem;
+    }
+    .pProyecto3 {
+      font-size: 1.1rem;
+    }
+    /* .textPM {
+      height: 100%;
+      margin-bottom: 20%;
+    } */
+    .redesLanding {
+      width: 40%;
+    } 
+    
+}
+
+@media only screen and (max-height: 770px) {
+  .pProyecto2 {
+    font-size: 1rem;
+  }
+  .pProyecto3 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-height: 660px) {
+  .pProyecto2 {
+    font-size: 0.9rem;
+  }
+  .pProyecto3 {
+    font-size: 0.9rem;
+  }
+}

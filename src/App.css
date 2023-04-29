@@ -1,38 +1,505 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nerko+One&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --chango: 'Chango', cursive;
+    --nerko: 'Nerko One', cursive;
+    --open: 'Open Sans', sans-serif;
+    --cien: calc(var(--vh, 1vh) * 100); 
+    --fuente: 'Poppins', sans-serif;
+    --color1: #46C2CB;
+    --mplus: 'M PLUS 2', sans-serif;
+    --mont: 'Montserrat', sans-serif;
+}
+  ::selection {
+    background: var(--color1); 
+    color: #FFFF;
+  }
+  ::-moz-selection {
+    background: var(--color1);
+    color: #FFFF;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    background: transparent; 
+  }
+    ::-webkit-scrollbar-track {
+    background: transparent; 
+    width: 1px;
+  }
+    ::-webkit-scrollbar-thumb {
+    background: #0F0E0E;
+     
+      border-radius:10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    
+    background: #252323; 
+  } 
+  html {
+    margin: 0 0;
+}
+body {
+    margin: 0 0;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h5, p {
+    margin: 0 0;
+}
+:focus {
+  background-color: transparent;
+outline: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+
+.bgIn1 {
+  -webkit-animation: bg-in1 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: bg-in1 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes bg-in1 {
+  0% {
+    background: #0F0E0E;
+  }
+
+  100% {
+    background-image: url('./img/eccomerce2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+@keyframes bg-in1 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+    background-image: url('./img/eccomerce2.jpg');
+    background-position: center;
+    background-size: cover;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.bgIn2 {
+  -webkit-animation: bg-in2 0.5s linear both;
+	        animation: bg-in2 0.5s linear both;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+@-webkit-keyframes bg-in2 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+    background-image: url('./img/vapearg.png');
+    background-position: center;
+    background-size: cover;
+  }
+}
+@keyframes bg-in2 {
+  0% {
+    background: #0F0E0E;
+  }
+  100% {
+    background-image: url('./img/vapearg.png');
+    background-position: center;
+    background-size: cover;
+  }
 }
 
-@keyframes App-logo-spin {
+
+
+
+
+.bgIn3 {
+  -webkit-animation: bg-in3 0.5s linear both;
+	        animation: bg-in3 0.5s linear both;
+}
+
+
+
+@-webkit-keyframes bg-in3 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+    background-image: url('./img/rain2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+@keyframes bg-in3 {
+  0% {
+    background: #0F0E0E;
+  }
+  100% {
+    background-image: url('./img/rain2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+.bgIn4 {
+  -webkit-animation: bg-in4 0.5s linear both;
+	        animation: bg-in4 0.5s linear both;
+}
+
+
+
+@-webkit-keyframes bg-in4 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+    background-image: url('./img/album.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+@keyframes bg-in4 {
+  0% {
+    background: #0F0E0E;
+  }
+  100% {
+    background-image: url('./img/album.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.bgIn5 {
+  -webkit-animation: bg-in5 0.5s linear both;
+	        animation: bg-in5 0.5s linear both;
+}
+
+
+
+@-webkit-keyframes bg-in5 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+    background-image: url('./img/freelancer.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+@keyframes bg-in5 {
+  0% {
+    background: #0F0E0E;
+  }
+  100% {
+    background-image: url('./img/freelancer.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+ @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
+.fade-in {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 5px;
+  transform: translateY(5px);
+}
+
+@keyframes fade-in {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(5px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.expandir-txt-arriba {
+	-webkit-animation: expandir-txt-arriba 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: expandir-txt-arriba 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes expandir-txt-arriba {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(-500px);
+              transform: translateZ(-700px) translateY(-500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes expandir-txt-arriba {
+    0% {
+      letter-spacing: -0.5em;
+      -webkit-transform: translateZ(-700px) translateY(-500px);
+              transform: translateZ(-700px) translateY(-500px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateY(0);
+              transform: translateZ(0) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+ @-webkit-keyframes expandir-txt {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes expandir-txt {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+.expandir-txt {
+	-webkit-animation: expandir-txt 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: expandir-txt 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation-delay: 1.1s;
+}
+
+
+
+
+.bgInH {
+  -webkit-animation: bg-inH 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: bg-inH 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+
+@-webkit-keyframes bg-inH {
+  0% {
+    background: #252525;
+  }
+ 50% {
+    background: #131111;
+  }
+  100% {
+    background: #0F0E0E;
+  }
+}
+@keyframes bg-inH {
+  0% {
+    background: #252525;
+  }
+ 50% {
+    background: #161616;
+  }
+  100% {
+    background: #0F0E0E;
+  }
+}
+
+
+
+.scale-in-top {
+	-webkit-animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+ @-webkit-keyframes scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  
+	-webkit-animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+ @-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+ @-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-top {
+	-webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }

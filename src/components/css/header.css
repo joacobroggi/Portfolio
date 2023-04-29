@@ -1,0 +1,115 @@
+header {
+    position: absolute;
+   width: 100%;
+}
+.ulHeader {
+    display: flex;
+    list-style: none;
+    color: white;
+    font-family: 'M PLUS 2', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 4%;
+    width: 90%;
+    margin-top: 1.5%;
+}
+.liHeader {
+    margin-right: 4%;
+    font-size: 0.9rem;
+    transition: 0.1s;
+    color: white;
+    text-decoration: none;
+}
+.liHeader:hover {
+    color: var(--color1);
+    cursor: pointer;
+}
+.flagImg:hover {
+  cursor: pointer;
+}
+
+.btnPaquetesHeader {
+    margin-right: 0.5%;
+    margin-left: auto;
+    font-family: var(--fuente);
+    text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFF;
+   
+   
+  
+}
+.flags {
+   background-color: transparent;
+    border: 0px;
+    font-size: 2rem;
+    
+}
+.flagImg {
+    width: 2.5vw;
+    opacity: 65%;
+}
+.flagImgA {
+    width: 3vw;
+}
+@media only screen and (max-width: 850px){ 
+    .flagImgA {
+      width: 100%;
+      height: calc(var(--vh, 1vh) * 5);
+    }
+    .flagImg {
+      width: 100%;
+      height: calc(var(--vh, 1vh) * 4);
+    }
+    .headerM {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      .bars {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.6rem;
+        margin-left: 2%;
+        
+      }
+      .btnPaquetesHeaderM {
+        width: 27%;
+        margin-top: 2%;
+        margin-right: 0;
+      }
+      .headerDisplayed {
+        width: 100%;
+        background: rgb(15,14,14);
+    background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
+        margin: 0 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .headerMul {
+        margin: 0 0;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        list-style: none;
+        font-size: 1.3rem;
+        color: white;
+        font-family: 'M PLUS 2', sans-serif;
+         text-transform: uppercase;
+        font-weight: 600;
+      }
+      .headerMli {
+       padding-bottom: 2%;
+        color: aliceblue;
+      }
+      .headerM2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+}

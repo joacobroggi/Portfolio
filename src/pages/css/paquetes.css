@@ -1,0 +1,646 @@
+.slider {
+  height: 100vh;
+}
+.hide {
+  display: none;
+}
+.paquete {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.txtCard {
+  width: 35%;
+}
+.tiendaOnline {
+  background-image: url("../../img/eccomerce2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.artista {
+  background-image: url("../../img/vapearg.png");
+  background-position: center;
+  background-size: cover;
+}
+.h3Paquetes {
+  font-size: 4rem;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: white;
+
+  text-align: left;
+}
+.h6Paquetes {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-family: "Public Sans", sans-serif;
+  color: white;
+  margin-top: 5%;
+}
+
+.flechaIzq2 {
+  position: absolute;
+  border: 1px solid transparent;
+  top: 52%;
+  left: 96.3%;
+  color: black;
+  background-color: white;
+  padding: 0.4% 0.6%;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+.flechaIzq2:hover {
+  cursor: pointer;
+  color: white;
+
+  background-color: black;
+}
+.flechaDer2 {
+  position: absolute;
+  transition: 0.5s;
+  top: 45.5%;
+  left: 96.3%;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 0.4% 0.6%;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+.flechaDer2:hover {
+  cursor: pointer;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.txtCard {
+  margin-left: 7%;
+}
+.enfasis {
+  color: var(--color1);
+  text-decoration: underline;
+}
+.circulos {
+  display: flex;
+  margin-left: 7%;
+  width: 6%;
+  justify-content: space-between;
+  justify-self: flex-end;
+  position: absolute;
+  top: 94%;
+}
+.dot {
+  height: 20px;
+  width: 20px;
+
+  outline: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dota {
+    height: 20px;
+    width: 20px;
+  
+    outline: 2px solid var(--color1);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.paquetesGallery {
+    min-height: 100vh;
+    background-color: #0F0E0E;
+    text-align: center;
+}
+.paquetesGcont {
+    display: flex;
+    width: 73vw;
+    margin: 0 auto;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.h4Gallery {
+    margin-top: 0;
+    font-family: var(--mplus);
+    font-weight: 400;
+    font-size: 2rem;
+    color: white;
+    padding-top: 7%;
+    margin-bottom: 0;
+}
+.h6Gallery {
+    font-weight: 300;
+    font-family: var(--mplus);
+    color: var(--color1);
+    font-size: 1rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.gItem {
+    height: 60vh;
+    width: 23vw;
+    margin: 0 0;
+    margin-top: 2%;
+}
+.eccomerce {
+    background-image: url('../../img/eccomerce.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.freelance {
+  background-image: url('../../img/freelancer.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.marca {
+  background-image: url('../../img/marca.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.iconItem {
+    color: white;
+    font-size: 1.7rem;
+}
+.textG {
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  
+    margin: 0 0;
+    height: 90%;
+    padding: 5.5%;
+    transition: visibility 0s, opacity 0.3s linear;
+   
+}
+
+
+.gItem:hover > .textG {
+    visibility: visible;
+    opacity: 1;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.h2Item {
+    color: white;
+    font-family: var(--mplus);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+.pItem {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+    font-family: var(--mplus);
+}
+.bItem {
+    background-color: transparent;
+   border: 1px solid white;
+   color: white;
+   border-radius: 10px;
+   font-family: var(--mplus);
+   width: 50%;
+   margin: 0 auto;
+   margin-top: 10%;
+   padding: 1% 2%;
+   transition: 0.3s;
+   font-weight: 500;
+}
+.bItem:hover {
+background-color: white;
+color: black;
+cursor: pointer;
+}
+.mobile {
+  display: none;
+}
+.headerMul2 {
+  margin-top: 10%;
+}
+.bars2 {
+  margin-top: 2%;
+}
+
+.paquetesGaleria {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.paqueteComp {
+  width: 50%;
+  height: 90vh;
+ margin: 0 0;
+  
+}
+.filtroP{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  transition: 0.2s;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 0;
+  width: 100%;
+}
+.filtroP:hover {
+  /* -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); */
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  
+}
+.numeroPaquete {
+  color: white;
+  font-size: 2rem;
+  font-family: var(--mplus);
+  font-weight: 500;
+  margin-left: 5%;
+  margin-top: 4%;
+}
+.abajoP {
+  margin-left: 4%;
+}
+.h2P {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: var(--fuente);
+  margin-bottom: 0;
+}
+.h4P {
+  margin-top: 1%;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 300;
+  width: 90%;
+  
+  font-family: var(--fuente);
+}
+
+.porQue {
+  /* background: rgb(15,14,14);
+background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgba(30,70,73,1) 100%); */
+/* background: rgb(15,14,14);
+background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgba(17,38,40,1) 100%); */
+
+background: rgb(15,14,14);
+background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
+}
+.h4pq1 {
+  margin-bottom: 0;
+  font-family: var(--fuente);
+  color: var(--color1);
+  /* text-decoration: underline;
+  text-decoration-color: var(--color1); */
+  /* text-transform: uppercase; */
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-top: 4%;
+}
+.h5pq1 {
+  margin-bottom: 0;
+  font-family: var(--fuente);
+  color: white;
+  /* text-transform: uppercase; */
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding-top: 2%;
+}
+.pq1 {
+  margin-left: 4%;
+}
+.h2pq1 {
+  margin-bottom: 1%;
+  margin-top: 1%;
+  font-family: var(--fuente);
+  color: white;
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  font-size: 3rem;
+}
+.pPq1 {
+  font-family: var(--fuente);
+  color: white;
+  margin-top: 4%;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.pPq2 {
+  font-family: var(--fuente);
+  color: white;
+  margin-top: 4%;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.containerpq1 {
+  display: flex;
+justify-content: space-between;
+}
+.pq1 {
+  width: 45%;
+}
+.imgpq-cont {
+  width: 35vw;
+  margin-right: 1%;
+}
+.img-pq1 {
+  width: 90%;
+  margin-top: 10%;
+  height: 80vh;
+}
+.img-pq2 {
+  /* width: 30vw; */
+  margin-top: 10%;
+  height: 75vh;
+  position: absolute;
+  right: 10%;
+  top: 100%;
+}
+.dot {
+  transition: 0.5s;
+}
+.dot:hover {
+  cursor: pointer;
+  /* background-color: var(--color1); */
+  outline-color: var(--color1);
+
+}
+.h5pq1 {
+  padding-top: 10%;
+}
+.statsCont {
+  display: flex;
+  width: 30vw;
+  justify-content: space-between;
+}
+.stats {
+ 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.h3Stats {
+  margin-top: 0;
+  color: white;
+  font-size: 3rem;
+  font-family: var(--open);
+  font-weight: 900;
+}
+.h6Stats {
+  color: white;
+  /* margin-top: 0; */
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  font-family: var(--fuente);
+  font-weight: 500;
+}
+
+.h2pq2 {
+  font-size: 3rem;
+  color: white;
+  font-family: var(--fuente);
+  font-weight: 400;
+  margin-left: 4%;
+  margin-top: 5%;
+}
+.pPq3 {
+  font-size: 1rem;
+  color: white;
+  width: 85%;
+  font-family: var(--fuente);
+  font-weight: 400;
+  margin-left: 4%;
+}
+.iconMejora {
+  font-size: 4rem;
+  color: var(--color1);
+
+  font-family: var(--fuente);
+}
+.h5Mejora {
+  font-size: 2rem;
+  color: white;
+font-weight: 400;
+  font-family: var(--fuente);
+}
+.pMejora {
+  font-size: 1rem;
+  color: white;
+font-weight: 400;
+  font-family: var(--fuente);
+}
+.mejora {
+  width: 30%;
+  
+}
+.mejorasPq {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: space-around;
+  padding-bottom: 5%;
+}
+@media only screen and (max-width: 850px){ 
+  .desk {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .h2pq1 {
+    font-size: 2.2rem;
+  }
+  .txtCard {
+    width: 90%;
+  }
+  .h3Paquetes {
+    font-size: 3.4rem;
+  }
+  .circulos {
+    width: 25%;
+   margin-left: 8.5%;
+  }
+  .gItem {
+    width: 90%;
+    height: calc(var(--vh, 5vh) * 60);
+    background-repeat: no-repeat;
+    margin-bottom: 5%;
+  }
+  .paquetesGcont {
+    margin-top: 5%;
+  }
+  .iconItem {
+    font-size: 1.5rem;
+  }
+  .h2Item {
+    font-size: 1.5rem;
+  }
+  .pItem {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .bItem {
+    width: 90%;
+  }
+  .paqueteComp {
+    width: 100%;
+    height: calc(var(--vh, 5vh) * 85);
+   margin: 0 0;
+    
+  }
+  .containerpq1 {
+    width: 100%;
+  }
+  .pq1 {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .pq3 {
+    width: 85%;
+    margin: 0 auto;
+    
+  }
+  .h2pq2 {
+    font-size: 2.1rem;
+    
+  }
+  .h5Mejora {
+    font-size: 1.5rem;
+  }
+  .pMejora {
+    font-size: 1rem;
+  }
+  .mejorasPq {
+    flex-wrap: wrap;
+  }
+  .mejora {
+    text-align: center;
+    width: 100%;
+    
+  }
+  .pPq1 {
+    padding-bottom: 20%;
+  }
+  .h4ServiciosUl {
+    font-family: var(--fuente);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .liServicios {
+    font-size: 1.1rem;
+    margin-bottom: 1.2%;
+  }
+}
+
+
+/* ANIMACIONES */
+.bgIn1 {
+  -webkit-animation: bg-in1 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: bg-in1 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes bg-in1 {
+  0% {
+    background: #0F0E0E;
+  }
+
+  100% {
+    background-image: url('../../img/eccomerce2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+@keyframes bg-in1 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+    background-image: url('../../img/eccomerce2.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+.bgIn2 {
+  -webkit-animation: bg-in2 0.5s linear both;
+	        animation: bg-in2 0.5s linear both;
+}
+
+
+
+@-webkit-keyframes bg-in2 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+    background-image: url('../../img/vapearg.png');
+    background-position: center;
+    background-size: cover;
+  }
+}
+@keyframes bg-in2 {
+  0% {
+    background: #0F0E0E;
+  }
+  100% {
+    background-image: url('../../img/vapearg.png');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+ @-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}

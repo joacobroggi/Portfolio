@@ -110,21 +110,21 @@ const Paquetes = (props) => {
             <header>
               <ul class="ulHeader">
                 <Link
-                  to="/"
+                  to="/home"
                   class="liHeader"
                   
                 >
                   sobre mí
                 </Link>
                 <Link
-                  to="/"
+                  to="/home"
                   class="liHeader"
                   
                 >
                   proyectos
                 </Link>
                 <Link
-                  to="/"
+                  to="/home"
                   class="liHeader"
                   
                 >
@@ -531,7 +531,7 @@ const Paquetes = (props) => {
             <header>
               <ul className="ulHeader">
                 <Link
-                  to="/"
+                  to="/home"
                   className="liHeader"
                   
                 >

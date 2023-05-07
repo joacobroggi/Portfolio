@@ -1,0 +1,5 @@
+.precios {
+    background: rgb(15,14,14);
+    background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
+    height: 100vh;
+}

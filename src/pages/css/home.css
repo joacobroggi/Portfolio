@@ -134,8 +134,7 @@ h1 {
     min-height: 100vh;
     display: flex;
     background: rgb(15,14,14);
-background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
-   
+    background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
     background-attachment: fixed;
     margin: 0 0;
 }

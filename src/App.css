@@ -9,6 +9,10 @@
     --color1: #46C2CB;
     --mplus: 'M PLUS 2', sans-serif;
     --mont: 'Montserrat', sans-serif;
+    --hue: 223;
+	--bg: #46C2CB;
+	--fg: #46C2CB;
+  
 }
   ::selection {
     background: var(--color1); 
@@ -38,6 +42,9 @@
   } 
   html {
     margin: 0 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  
 }
 body {
     margin: 0 0;
@@ -503,3 +510,25 @@ opacity: 1;
     opacity: 1;
   }
 }
+
+
+.type {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 4.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: transparent; }
+}
+
+

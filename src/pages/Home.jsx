@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faTiktok,
   faWhatsapp,
-  faTelegram,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAngleLeft,
@@ -214,8 +214,8 @@ const Home = (props) => {
                  
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>
@@ -574,8 +574,8 @@ const Home = (props) => {
                  
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>
@@ -1048,8 +1048,8 @@ const Home = (props) => {
                   ></FontAwesomeIcon></a>
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>
@@ -1469,8 +1469,8 @@ const Home = (props) => {
                   ></FontAwesomeIcon></a>
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>
@@ -1800,8 +1800,8 @@ const Home = (props) => {
                  
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>
@@ -2160,8 +2160,8 @@ const Home = (props) => {
                  
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>
@@ -2630,8 +2630,8 @@ const Home = (props) => {
                   ></FontAwesomeIcon></a>
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>
@@ -3055,8 +3055,8 @@ const Home = (props) => {
                   ></FontAwesomeIcon></a>
                 </div>
                 <div className="redes">
-                <a href="https://www.tiktok.com/@jmbroggidev" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
-                    icon={faTiktok}
+                <a href="https://github.com/joacobroggi" style={{textDecoration: 'none', color: 'white'}}> <FontAwesomeIcon
+                    icon={faGithub}
                     className="icon"
                   ></FontAwesomeIcon></a>
                 </div>

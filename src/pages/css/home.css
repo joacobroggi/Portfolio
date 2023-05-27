@@ -124,7 +124,11 @@ h1 {
     cursor: pointer;
    
 }
-
+.vermasP {
+  background-image: url('../../img/basica.jpg');
+  background-position: center;
+  background-size: cover;
+}
 
 
 
@@ -152,6 +156,8 @@ h1 {
   
     margin-bottom: 1%;
 }
+
+
 .aAbout {
     font-size: 1.1rem;
     color: #FFFF;
@@ -487,6 +493,37 @@ h1 {
 .mobile {
   display: none;
 }
+.medio {
+  margin: 0 auto;
+  text-align: center;
+}
+.medio2 {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.verTodo {
+  color: white;
+  font-size: 1.2rem;
+  font-family: va;
+}
+.vermasH2 {
+  color: white;
+  font-family: var(--fuente);
+  font-size: 2rem;
+}
+.linkVermas {
+  color: white;
+  font-family: var(--fuente);
+  font-size: 1.2rem;
+  text-decoration-color: var(--color1);
+}
+
 
 
 @media only screen and (max-width: 850px){

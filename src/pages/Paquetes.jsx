@@ -104,41 +104,31 @@ const Paquetes = (props) => {
 
   return (
     <div>
+      {/* Español */}
       {esp && (
         <div>
           <div className="desk">
-            <header>
-              <ul class="ulHeader">
-                <Link
-                  to="/home"
-                  class="liHeader"
-                  
-                >
-                  sobre mí
-                </Link>
-                <Link
-                  to="/home"
-                  class="liHeader"
-                  
-                >
-                  proyectos
-                </Link>
-                <Link
-                  to="/home"
-                  class="liHeader"
-                  
-                >
-                  contacto
-                </Link>
-                <Link
-                  class="liHeader"
-                  
-                >
-                  paquetes
-                </Link>
-                <li class="btnPaquetesHeader"></li>
-              </ul>
-            </header>
+          <header>
+                <ul class="ulHeader">
+                  <Link to="/home" class="liHeader">
+                    sobre mí
+                  </Link>
+                  <Link to="/proyectos" class="liHeader">
+                    proyectos
+                  </Link>
+
+                  <Link to="/home" class="liHeader">
+                    contacto
+                  </Link>
+                  <Link class="liHeader" to="/precios">
+                    precios
+                  </Link>
+                  <Link class="liHeader" to="/paquetes">
+                    paquetes
+                  </Link>
+                  <li class="btnPaquetesHeader"></li>
+                </ul>
+              </header>
             <div className="slider" id="paquetes">
               <span className="flechaIzq2" onClick={atras}>
                 <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
@@ -330,7 +320,7 @@ const Paquetes = (props) => {
                 <ul className="slide-in-left headerMul headerMul2">
                   <li>
                     <Link
-                      to="/"
+                      to="/home"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
@@ -339,7 +329,7 @@ const Paquetes = (props) => {
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/proyectos"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
@@ -348,11 +338,20 @@ const Paquetes = (props) => {
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/home"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
                       Contacto
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/precios"
+                      className="headerMli"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Precios
                     </Link>
                   </li>
                   <li>
@@ -525,40 +524,30 @@ const Paquetes = (props) => {
         </div>
       )}
 
+{/* ENGLISH */}
       {eng && (
         <div>
           <div className="desk">
             <header>
-              <ul className="ulHeader">
-                <Link
-                  to="/home"
-                  className="liHeader"
-                  
-                >
-                  about me
-                </Link>
-                <Link
-                  to="/"
-                  className="liHeader"
-                  
-                >
-                  my work
-                </Link>
-                <Link
-                  to="/"
-                  className="liHeader"
-                  
-                >
-                  contact me
-                </Link>
-                <Link
-                  className="liHeader"
-                  
-                >
-                  packages
-                </Link>
-                <li className="btnPaquetesHeader"></li>
-              </ul>
+            <ul class="ulHeader">
+                  <Link to="/eng" class="liHeader">
+                    about me
+                  </Link>
+                  <Link to="/work" class="liHeader">
+                    my work
+                  </Link>
+
+                  <Link to="/eng" class="liHeader">
+                    contact me
+                  </Link>
+                  <Link class="liHeader" to="/eng/precios">
+                    prices
+                  </Link>
+                  <Link class="liHeader" to="/eng/paquetes">
+                    packages
+                  </Link>
+                  <li class="btnPaquetesHeader"></li>
+                </ul>
             </header>
             <div className="slider" id="paquetes">
               <span className="flechaIzq2" onClick={atras}>
@@ -749,38 +738,47 @@ const Paquetes = (props) => {
                 <ul className="slide-in-left headerMul headerMul2">
                   <li>
                     <Link
-                      to="/"
+                      to="/eng"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
-                      Sobre Mí
+                      About Me
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/work"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
-                      Proyectos
+                      My Work
                     </Link>
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/eng"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
-                      Contacto
+                      Contact Me
                     </Link>
                   </li>
                   <li>
+                 <Link style={{textDecoration: 'none'}}
+                    to="/eng/precios"
+                    className="headerMli"
+                    
+                  >
+                    Prices
+                  </Link>
+                 </li>
+                  <li>
                     <Link
-                      to="/paquetes"
+                      to="/eng/paquetes"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
-                      Paquetes
+                      Packages
                     </Link>
                   </li>
                 </ul>

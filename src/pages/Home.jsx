@@ -20,6 +20,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = (props) => {
   let esp = props.esp;
@@ -31,19 +33,22 @@ const Home = (props) => {
   const [slide, setSlide] = useState(true);
   const [slide2, setSlide2] = useState(false);
   const [slide3, setSlide3] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [slide4, setSlide4] = useState(false);
   const [header, setHeader] = useState(false);
 
   const backProyecto = () => {
     if (slide) {
       setSlide(false);
-      setSlide3(true);
+      setSlide4(true);
     } else if (slide2) {
       setSlide2(false);
       setSlide(true);
     } else if (slide3) {
       setSlide3(false);
       setSlide2(true);
+    } else if (slide4) {
+      setSlide3(true);
+      setSlide2(false);
     }
   };
   const nextProyecto = () => {
@@ -55,6 +60,9 @@ const Home = (props) => {
       setSlide3(true);
     } else if (slide3) {
       setSlide3(false);
+      setSlide4(true);
+    } else if (slide4) {
+      setSlide4(false);
       setSlide(true);
     }
   };
@@ -117,6 +125,7 @@ const Home = (props) => {
     setTimeout(() => {
       setLoading(false);
     }, 4500);
+    AOS.init();
   }, []);
 
   return (
@@ -137,9 +146,9 @@ const Home = (props) => {
                 <li className="liHeader" onClick={handleAbout}>
                   about me
                 </li>
-                <li className="liHeader" onClick={handleProyectos}>
+                <Link to='/work' className="liHeader">
                   my work
-                </li>
+                </Link>
                 <li className="liHeader" onClick={handleContacto}>
                   contact me
                 </li>
@@ -177,7 +186,7 @@ const Home = (props) => {
                   <br />
                   <span className="expandir-txt-arriba broggi">Broggi</span>
                 </h1>
-                <h3 className="expandir-txt h3Landing">
+                <h3 className="type h3Landing">
                 Web Developer and Designer.
                 </h3>
                 <div className="botonesLanding">
@@ -228,17 +237,17 @@ const Home = (props) => {
 
             <div className="about" id="about">
               <div className="txtAbout">
-                <h2 className="${isScrolled ? 'fade-in' : ''} h2About">
+                <h2 data-aos="fade-up" className="${isScrolled ? 'fade-in' : ''} h2About">
                   ¿Who am I?
                 </h2>
-                <a href="mailto:jmbroggidev@gmail.com" className="aAbout">
+                <a data-aos="fade-up" href="mailto:jmbroggidev@gmail.com" className="aAbout">
                   jmbroggidev@gmail.com
                 </a>
-                <p className="pAbout">
+                <p data-aos="fade-up" className="pAbout">
                 Hi! My name is Joaquín and I'm a <b className="b">web developer and designer</b>. My main focus is on creating high-quality websites that meet each of my clients' specific objectives. I offer <b className="b">highly customizable services</b> to adapt to the needs of each project and ensure customer satisfaction. In addition to my technical programming skills, I have a <b className="b">marketing and design-focused perspective</b>. I am dedicated to creating websites that are not only visually appealing but also effective in promoting my clients' brand and products. I am very dedicated in everything I do and always strive to exceed my clients' expectations. I ensure that each project I work on is designed and developed with the <b className="b">highest quality</b> and <b className="b">attention to detail</b> possible.
                 </p>
 
-                <div>
+                <div data-aos="fade-up">
                   <p className="pAbout">
                   These are some of my favorite technologies:
                   </p>
@@ -318,7 +327,7 @@ const Home = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="aboutButtons">
+                <div data-aos="flip-up" className="aboutButtons">
                   <a href="https://www.linkedin.com/in/joaqu%C3%ADn-broggi-904352274" className="cv" style={{textDecoration: 'none'}}>
                     Check my LinkedIn {" "}
                     <FontAwesomeIcon icon={faFileLines}></FontAwesomeIcon>
@@ -331,7 +340,7 @@ const Home = (props) => {
               </div>
 
               {img1 && (
-                <div className="fade-in imgContainerAbout">
+                <div data-aos="fade-right" className=" imgContainerAbout">
                   <div className="imgSelector">
                     <div className="circles">
                       <span
@@ -347,7 +356,7 @@ const Home = (props) => {
                 </div>
               )}
               {!img1 && (
-                <div className="fade-in imgContainerAbout2">
+                <div data-aos="fade-right" className=" imgContainerAbout2">
                   <div className="imgSelector">
                     <div className="circles">
                       <span
@@ -374,7 +383,7 @@ const Home = (props) => {
 
               {slide && (
                 <div className="bgIn2 proyecto vapearg">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <a
                       href="https://vapearg.com/"
                       className={"h2Proyectosvapearg"}
@@ -404,7 +413,7 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/4sWsgi5MTBg"
                       title="YouTube video player"
                       allowFullScreen={true}
@@ -417,7 +426,7 @@ const Home = (props) => {
 
               {slide2 && (
                 <div className="bgIn3 proyecto clima">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <h2 className={"h2Proyectosclima"}>
                       {" "}
                       <a href="https://clima-pa13.onrender.com" style={{textDecoration: 'none', color: 'white'}}>clima</a> <span className="com2">by jmb</span>{" "}
@@ -442,7 +451,7 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/xRk_6x4pS_4"
                       title="YouTube video player"
                       allowFullScreen={true}
@@ -454,7 +463,7 @@ const Home = (props) => {
               )}
               {slide3 && (
                 <div className="bgIn4 proyecto album">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <a href="https://album-af.netlify.app" style={{textDecoration: 'none'}} className={"h2Proyectosalbum"}>A + F</a>
                     <h4 className="h4Proyectos">MUSIC ALBUM</h4>
                     <p className="pProyectos">
@@ -467,13 +476,21 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/V3nr3O6mfb0"
                       title="YouTube video player"
                       allowFullScreen={true}
                       controls={true}
                       className="proyectosIframe"
                     ></iframe>
+                  </div>
+                </div>
+              )}
+              {slide4 && (
+                <div className="proyecto vermasP">
+                  <div data-aos="fade-up" className="medio">
+                    <h2 className="vermasH2">👇💻 Check all my projects💻👇</h2>
+                    <Link to='/work' className="linkVermas">All my work</Link>
                   </div>
                 </div>
               )}
@@ -490,9 +507,9 @@ const Home = (props) => {
                 <li className="liHeader" onClick={handleAbout}>
                   sobre mí
                 </li>
-                <li className="liHeader" onClick={handleProyectos}>
+                <Link to='/proyectos' className="liHeader">
                   proyectos
-                </li>
+                </Link>
                 <li className="liHeader" onClick={handleContacto}>
                   contacto
                 </li>
@@ -580,13 +597,13 @@ const Home = (props) => {
 
             <div className="about" id="about">
               <div className="txtAbout">
-                <h2 className="${isScrolled ? 'fade-in' : ''} h2About">
+                <h2 data-aos="fade-up" className="h2About">
                   ¿Quien soy?
                 </h2>
-                <a href="mailto:jmbroggidev@gmail.com" className="aAbout">
+                <a data-aos="fade-up" href="mailto:jmbroggidev@gmail.com" className="aAbout">
                   jmbroggidev@gmail.com
                 </a>
-                <p className="pAbout">
+                <p data-aos="fade-up" className="pAbout">
                   ¡Hola! Me llamo Joaquín y soy un <b className="b">desarrollador y diseñador web</b>. Mi enfoque
                   principal es crear sitios web de <b className="b">alta calidad</b> que
                   cumplan con los objetivos específicos de cada uno de mis
@@ -606,10 +623,10 @@ const Home = (props) => {
                 </p>
 
                 <div>
-                  <p className="pAbout">
+                  <p data-aos="fade-up" className="pAbout">
                     Estas son algunas de mis tecnologias favoritas:
                   </p>
-                  <div className="tecnologias">
+                  <div data-aos="fade-down" className="tecnologias">
                     <div className="tecnologia">
                       <img
                         src={require("../img/html5.png")}
@@ -685,8 +702,8 @@ const Home = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="aboutButtons">
-                  <a href="https://www.linkedin.com/in/joaqu%C3%ADn-broggi-904352274" className="cv" style={{textDecoration: 'none'}}>
+                <div  data-aos="flip-down" className="aboutButtons">
+                  <a  href="https://www.linkedin.com/in/joaqu%C3%ADn-broggi-904352274" className="cv" style={{textDecoration: 'none'}}>
                     Checkea mi LinkedIn {" "}
                     <FontAwesomeIcon icon={faFileLines}></FontAwesomeIcon>
                   </a>
@@ -698,7 +715,7 @@ const Home = (props) => {
               </div>
 
               {img1 && (
-                <div className="fade-in imgContainerAbout">
+                <div data-aos="fade-right" className=" imgContainerAbout">
                   <div className="imgSelector">
                     <div className="circles">
                       <span
@@ -714,7 +731,7 @@ const Home = (props) => {
                 </div>
               )}
               {!img1 && (
-                <div className="fade-in imgContainerAbout2">
+                <div data-aos="fade-right" className="imgContainerAbout2">
                   <div className="imgSelector">
                     <div className="circles">
                       <span
@@ -741,7 +758,7 @@ const Home = (props) => {
 
               {slide && (
                 <div className="bgIn2 proyecto vapearg">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <a
                       href="https://vapearg.com/"
                       className={"h2Proyectosvapearg"}
@@ -761,8 +778,7 @@ const Home = (props) => {
                       de vapers en la ciudad de Rosario. A pesar de haber sido
                       diseñado para funcionar al 100%, este proyecto se vio
                       obligado a suspender su actividad debido a la reciente
-                      prohibición del cigarrillo electrónico en Argentina. A
-                      pesar de que actualmente no se encuentra operativo,
+                      prohibición del cigarrillo electrónico en Argentina. Aunque actualmente no se encuentra operativo,
                       Vapearg sigue siendo un buen ejemplo de un ecommerce con
                       un diseño atractivo y una funcionalidad eficiente.
                     </p>
@@ -774,10 +790,15 @@ const Home = (props) => {
                       JsonWebToken, Bcrypt, API hecha a medida, Redux, Persist,
                       .
                     </p>
+                    <br />
+                    <Link to='/proyectos' className="pProyectos2">
+                      Tocá para ver todos los proyectos
+                      
+                    </Link>
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/4sWsgi5MTBg"
                       title="YouTube video player"
                       
@@ -788,10 +809,9 @@ const Home = (props) => {
                   </div>
                 </div>
               )}
-
               {slide2 && (
                 <div className="bgIn3 proyecto clima">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <h2 className={"h2Proyectosclima"}>
                       {" "}
                       <a href="https://clima-pa13.onrender.com" style={{textDecoration: 'none', color: 'white'}}>clima</a> <span className="com2">by jmb</span>{" "}
@@ -826,7 +846,7 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/xRk_6x4pS_4"
                       title="YouTube video player"
                       
@@ -839,7 +859,7 @@ const Home = (props) => {
               )}
               {slide3 && (
                 <div className="bgIn4 proyecto album">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <a href="https://album-af.netlify.app" style={{textDecoration: 'none'}} className={"h2Proyectosalbum"}>A + F</a>
                     <h4 className="h4Proyectos">ÁLBUM DE CANCIONES</h4>
                     <p className="pProyectos">
@@ -862,7 +882,7 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/V3nr3O6mfb0"
                       title="YouTube video player"
                       
@@ -873,6 +893,15 @@ const Home = (props) => {
                   </div>
                 </div>
               )}
+              {slide4 && (
+                <div className="proyecto vermasP">
+                  <div data-aos="fade-up" className="medio">
+                    <h2 className="vermasH2">👇💻 Checkea todos mis proyectos💻👇</h2>
+                    <Link to='/proyectos' className="linkVermas">Ver Todo</Link>
+                  </div>
+                </div>
+              )}
+              
             </div>
             <Footer esp={true}></Footer>
           </div>
@@ -948,7 +977,7 @@ const Home = (props) => {
                   </Link>
                   </li>
                   <li>
-                  <Link style={{textDecoration: 'none'}} onClick={handleProyectosM} className="headerMli">
+                  <Link style={{textDecoration: 'none'}} to='/proyectos' className="headerMli">
                     Proyectos
                   </Link>
                   </li>
@@ -958,6 +987,15 @@ const Home = (props) => {
                     Contacto
                   </Link>
                   </li>
+                  <li>
+                 <Link style={{textDecoration: 'none'}}
+                    to="/precios"
+                    className="headerMli"
+                    
+                  >
+                    Precios
+                  </Link>
+                 </li>
                  <li>
                  <Link style={{textDecoration: 'none'}}
                     to="/paquetes"
@@ -1020,9 +1058,9 @@ const Home = (props) => {
 
             <div className="aboutM" id="aboutM">
               <div className="txtAboutM">
-                <h2 className="aboutH2M">¿Quien Soy?</h2>
-                <a className="emailM">jmbroggidev@gmail.com</a>
-                <p className="pAboutM">
+                <h2 data-aos="fade-up" className="aboutH2M">¿Quien Soy?</h2>
+                <a data-aos="fade-up" className="emailM">jmbroggidev@gmail.com</a>
+                <p data-aos="fade-up" className="pAboutM">
                 ¡Hola! Me llamo Joaquín y soy un <b>desarrollador y diseñador web</b> Mi enfoque
                   principal es crear sitios web de <b>alta calidad</b> que
                   cumplan con los objetivos específicos de cada uno de mis
@@ -1040,7 +1078,7 @@ const Home = (props) => {
                   esté diseñado y desarrollado con{" "}
                   <b>la mayor calidad y atención al detalle posible</b>.
                 </p>
-                <div>
+                <div data-aos="fade-up">
                   <p className="pAboutM2">
                     Estas son algunas de mis tecnologias favoritas:
                   </p>
@@ -1114,7 +1152,7 @@ const Home = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="botoneraM">
+              <div data-aos="fade-up" className="botoneraM">
                 <button onClick={linkedin} className="boton1M">Checkea MI LinkedIn</button>
                 <button className="boton2M" onClick={handleProyectosM}>Checkea mi Trabajo </button>
               </div>
@@ -1145,8 +1183,7 @@ const Home = (props) => {
                       de vapers en la ciudad de Rosario. A pesar de haber sido
                       diseñado para funcionar al 100%, este proyecto se vio
                       obligado a suspender su actividad debido a la reciente
-                      prohibición del cigarrillo electrónico en Argentina. A
-                      pesar de que actualmente no se encuentra operativo,
+                      prohibición del cigarrillo electrónico en Argentina. Aunque actualmente no se encuentra operativo,
                       Vapearg sigue siendo un buen ejemplo de un ecommerce con
                       un diseño atractivo y una funcionalidad eficiente.
                     </p>
@@ -1157,11 +1194,11 @@ const Home = (props) => {
                       ReactJs, MongoDb, NodeJs, ExpressJs, HTML5, CSS3, OAuth,
                       JasonWebToken, Bcrypt.
                     </p>
+                    
                   </div>
                   
                 </div>
               )}
-
               {slide2 && (
                 <div className="bgIn3 proyecto clima">
                   <div className="textPM">
@@ -1233,6 +1270,26 @@ const Home = (props) => {
                   </div>
                 </div>
               )}
+              {slide4 && (
+                <div className="proyecto vermasP">
+                  <div className="textPM">
+                    <div className="flechasDiv">
+                      <span className="flechaIzqM" onClick={backProyecto}>
+                        <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
+                      </span>
+                      <span className="flechaDerM" onClick={nextProyecto}>
+                        <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div data-aos="fade-up" className="medio2">
+                    <h2 className="vermasH2">Checkea todos mis proyectos</h2>
+                   <Link to='/proyecto' className="verTodo">Ver todo</Link>
+                  </div>
+                  </div>
+                  
+                </div>
+              )}
+              
             </div>
 
             <div className="footerMobile" id="contactoM">
@@ -1345,7 +1402,7 @@ const Home = (props) => {
                   </Link>
                   </li>
                   <li>
-                  <Link style={{textDecoration: 'none'}} onClick={handleProyectosM} className="headerMli">
+                  <Link style={{textDecoration: 'none'}} to='/work' className="headerMli">
                     My Work
                   </Link>
                   </li>
@@ -1353,6 +1410,11 @@ const Home = (props) => {
                   <li>
                   <Link style={{textDecoration: 'none'}} onClick={handleContactoM} className="headerMli">
                     Contact me
+                  </Link>
+                  </li>
+                  <li>
+                  <Link to='/eng/precios' style={{textDecoration: 'none'}}  className="headerMli">
+                    Prices
                   </Link>
                   </li>
                  <li>
@@ -1417,13 +1479,13 @@ const Home = (props) => {
 
             <div className="aboutM" id="aboutM">
               <div className="txtAboutM">
-                <h2 className="aboutH2M">WHO AM I?</h2>
-                <a className="emailM">jmbroggidev@gmail.com</a>
-                <p className="pAboutM">
+                <h2 data-aos="fade-up" className="aboutH2M">WHO AM I?</h2>
+                <a data-aos="fade-up" className="emailM">jmbroggidev@gmail.com</a>
+                <p data-aos="fade-up" className="pAboutM">
                 Hi! My name is Joaquín and I'm a <b className="b">web developer and designer</b>. My main focus is on creating high-quality websites that meet each of my clients' specific objectives. I offer <b className="b">highly customizable services</b> to adapt to the needs of each project and ensure customer satisfaction. In addition to my technical programming skills, I have a <b className="b">marketing and design-focused perspective</b>. I am dedicated to creating websites that are not only visually appealing but also effective in promoting my clients' brand and products. I am very dedicated in everything I do and always strive to exceed my clients' expectations. I ensure that each project I work on is designed and developed with the <b className="b">highest quality</b> and <b className="b">attention to detail</b> possible.
                 </p>
                 <div>
-                  <p className="pAboutM2">
+                  <p data-aos="fade-up" className="pAboutM2">
                   These are some of my favorite technologies:
                   </p>
                   <div className="tecnologias">
@@ -1496,7 +1558,7 @@ const Home = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="botoneraM">
+              <div data-aos="fade-up" className="botoneraM">
                 <button onClick={linkedin} className="boton1M">Check my LinkedIn</button>
                 <button className="boton2M" onClick={handleProyectosM}> Check my work</button>
               </div>
@@ -1591,6 +1653,25 @@ const Home = (props) => {
                     HTML5, CSS3, VanillaJS.
                     </p>
                   </div>
+                </div>
+              )}
+              {slide4 && (
+                <div className="proyecto vermasP">
+                  <div className="textPM">
+                    <div className="flechasDiv">
+                      <span className="flechaIzqM" onClick={backProyecto}>
+                        <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
+                      </span>
+                      <span className="flechaDerM" onClick={nextProyecto}>
+                        <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div data-aos="fade-up" className="medio2">
+                    <h2 className="vermasH2"> Check all my projects</h2>
+                   <Link to='/work' className="verTodo">All my projects</Link>
+                  </div>
+                  </div>
+                  
                 </div>
               )}
             </div>
@@ -1651,9 +1732,9 @@ const Home = (props) => {
                 <li className="liHeader" onClick={handleAbout}>
                   about me
                 </li>
-                <li className="liHeader" onClick={handleProyectos}>
+                <Link className="liHeader" to='/work'>
                   my work
-                </li>
+                </Link>
                 <li className="liHeader" onClick={handleContacto}>
                   contact me
                 </li>
@@ -1691,7 +1772,7 @@ const Home = (props) => {
                   <br />
                   <span className="expandir-txt-arriba broggi">Broggi</span>
                 </h1>
-                <h3 className="expandir-txt h3Landing">
+                <h3 className="type h3Landing">
                 Web Developer and Designer.
                 </h3>
                 <div className="botonesLanding">
@@ -1742,21 +1823,21 @@ const Home = (props) => {
 
             <div className="about" id="about">
               <div className="txtAbout">
-                <h2 className="${isScrolled ? 'fade-in' : ''} h2About">
+                <h2 data-aos="fade-up" className="h2About">
                   ¿Who am I?
                 </h2>
-                <a href="mailto:jmbroggidev@gmail.com" className="aAbout">
+                <a data-aos="fade-up" href="mailto:jmbroggidev@gmail.com" className="aAbout">
                   jmbroggidev@gmail.com
                 </a>
-                <p className="pAbout">
+                <p data-aos="fade-up" className="pAbout">
                 Hi! My name is Joaquín and I'm a <b className="b">web developer and designer</b>. My main focus is on creating high-quality websites that meet each of my clients' specific objectives. I offer <b className="b">highly customizable services</b> to adapt to the needs of each project and ensure customer satisfaction. In addition to my technical programming skills, I have a <b className="b">marketing and design-focused perspective</b>. I am dedicated to creating websites that are not only visually appealing but also effective in promoting my clients' brand and products. I am very dedicated in everything I do and always strive to exceed my clients' expectations. I ensure that each project I work on is designed and developed with the <b className="b">highest quality</b> and <b className="b">attention to detail</b> possible.
                 </p>
 
                 <div>
-                  <p className="pAbout">
+                  <p data-aos="fade-up" className="pAbout">
                   These are some of my favorite technologies:
                   </p>
-                  <div className="tecnologias">
+                  <div data-aos="fade-up" className="tecnologias">
                     <div className="tecnologia">
                       <img
                         src={require("../img/html5.png")}
@@ -1832,7 +1913,7 @@ const Home = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="aboutButtons">
+                <div data-aos="fade-up" className="aboutButtons">
                   <a href="https://www.linkedin.com/in/joaqu%C3%ADn-broggi-904352274" className="cv" style={{textDecoration: 'none'}}>
                     Check my LinkedIn {" "}
                     <FontAwesomeIcon icon={faFileLines}></FontAwesomeIcon>
@@ -1991,6 +2072,14 @@ const Home = (props) => {
                   </div>
                 </div>
               )}
+               {slide4 && (
+                <div className="proyecto vermasP">
+                  <div data-aos="fade-up" className="medio">
+                    <h2 className="vermasH2">👇💻 Check all my projects💻👇</h2>
+                    <Link to='/work' className="linkVermas">All my work</Link>
+                  </div>
+                </div>
+              )}
             </div>
             <Footer eng={true}></Footer>
           </div>
@@ -2004,9 +2093,9 @@ const Home = (props) => {
                 <li className="liHeader" onClick={handleAbout}>
                   sobre mí
                 </li>
-                <li className="liHeader" onClick={handleProyectos}>
+                <Link className="liHeader" to='/proyectos'>
                   proyectos
-                </li>
+                </Link>
                 <li className="liHeader" onClick={handleContacto}>
                   contacto
                 </li>
@@ -2044,7 +2133,7 @@ const Home = (props) => {
                   <span className="expandir-txt-arriba broggi">Broggi</span>
                 </h1>
                 <h3 className="type h3Landing">
-                 Desarrollador y Diseñador Web.
+                  Desarrollador y Diseñador Web.
                 </h3>
                 <div className="botonesLanding">
                   <button
@@ -2094,13 +2183,13 @@ const Home = (props) => {
 
             <div className="about" id="about">
               <div className="txtAbout">
-                <h2 className="${isScrolled ? 'fade-in' : ''} h2About">
+                <h2 data-aos="fade-up" className="h2About">
                   ¿Quien soy?
                 </h2>
-                <a href="mailto:jmbroggidev@gmail.com" className="aAbout">
+                <a data-aos="fade-up" href="mailto:jmbroggidev@gmail.com" className="aAbout">
                   jmbroggidev@gmail.com
                 </a>
-                <p className="pAbout">
+                <p data-aos="fade-up" className="pAbout">
                   ¡Hola! Me llamo Joaquín y soy un <b className="b">desarrollador y diseñador web</b>. Mi enfoque
                   principal es crear sitios web de <b className="b">alta calidad</b> que
                   cumplan con los objetivos específicos de cada uno de mis
@@ -2120,10 +2209,10 @@ const Home = (props) => {
                 </p>
 
                 <div>
-                  <p className="pAbout">
+                  <p data-aos="fade-up" className="pAbout">
                     Estas son algunas de mis tecnologias favoritas:
                   </p>
-                  <div className="tecnologias">
+                  <div data-aos="fade-down" className="tecnologias">
                     <div className="tecnologia">
                       <img
                         src={require("../img/html5.png")}
@@ -2199,8 +2288,8 @@ const Home = (props) => {
                     </div>
                   </div>
                 </div>
-                <div className="aboutButtons">
-                  <a href="https://www.linkedin.com/in/joaqu%C3%ADn-broggi-904352274" className="cv" style={{textDecoration: 'none'}}>
+                <div  data-aos="flip-down" className="aboutButtons">
+                  <a  href="https://www.linkedin.com/in/joaqu%C3%ADn-broggi-904352274" className="cv" style={{textDecoration: 'none'}}>
                     Checkea mi LinkedIn {" "}
                     <FontAwesomeIcon icon={faFileLines}></FontAwesomeIcon>
                   </a>
@@ -2212,7 +2301,7 @@ const Home = (props) => {
               </div>
 
               {img1 && (
-                <div className="fade-in imgContainerAbout">
+                <div data-aos="fade-right" className=" imgContainerAbout">
                   <div className="imgSelector">
                     <div className="circles">
                       <span
@@ -2228,7 +2317,7 @@ const Home = (props) => {
                 </div>
               )}
               {!img1 && (
-                <div className="fade-in imgContainerAbout2">
+                <div data-aos="fade-right" className="imgContainerAbout2">
                   <div className="imgSelector">
                     <div className="circles">
                       <span
@@ -2255,7 +2344,7 @@ const Home = (props) => {
 
               {slide && (
                 <div className="bgIn2 proyecto vapearg">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <a
                       href="https://vapearg.com/"
                       className={"h2Proyectosvapearg"}
@@ -2264,7 +2353,7 @@ const Home = (props) => {
                       {" "}
                       Vapearg<span className="com">.com</span>{" "}
                     </a>
-                    <h4 className="h4Proyectos">ECOOMERCE WEB APP</h4>
+                    <h4 className="h4Proyectos">ECOMmERCE WEB APP</h4>
                     <p className="pProyectos">
                       <b>
                         {" "}
@@ -2275,8 +2364,7 @@ const Home = (props) => {
                       de vapers en la ciudad de Rosario. A pesar de haber sido
                       diseñado para funcionar al 100%, este proyecto se vio
                       obligado a suspender su actividad debido a la reciente
-                      prohibición del cigarrillo electrónico en Argentina. A
-                      pesar de que actualmente no se encuentra operativo,
+                      prohibición del cigarrillo electrónico en Argentina. Aunque actualmente no se encuentra operativo,
                       Vapearg sigue siendo un buen ejemplo de un ecommerce con
                       un diseño atractivo y una funcionalidad eficiente.
                     </p>
@@ -2291,10 +2379,9 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
-                      src="https://www.youtube.com/embed/4sWsgi5MTBg"
+                    <iframe src="https://www.youtube.com/embed/4sWsgi5MTBg"
                       title="YouTube video player"
-                      
+                      data-aos="fade-up"
                       allowFullScreen={true}
                       controls={true}
                       className="fade-in-bottom proyectosIframe"
@@ -2302,10 +2389,9 @@ const Home = (props) => {
                   </div>
                 </div>
               )}
-
               {slide2 && (
                 <div className="bgIn3 proyecto clima">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <h2 className={"h2Proyectosclima"}>
                       {" "}
                       <a href="https://clima-pa13.onrender.com" style={{textDecoration: 'none', color: 'white'}}>clima</a> <span className="com2">by jmb</span>{" "}
@@ -2340,7 +2426,7 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/xRk_6x4pS_4"
                       title="YouTube video player"
                       
@@ -2353,7 +2439,7 @@ const Home = (props) => {
               )}
               {slide3 && (
                 <div className="bgIn4 proyecto album">
-                  <div className="txtProyectos">
+                  <div data-aos="fade-up" className="txtProyectos">
                     <a href="https://album-af.netlify.app" style={{textDecoration: 'none'}} className={"h2Proyectosalbum"}>A + F</a>
                     <h4 className="h4Proyectos">ÁLBUM DE CANCIONES</h4>
                     <p className="pProyectos">
@@ -2376,7 +2462,7 @@ const Home = (props) => {
                   </div>
 
                   <div className="derechaProyectos">
-                    <iframe
+                    <iframe data-aos="fade-up"
                       src="https://www.youtube.com/embed/V3nr3O6mfb0"
                       title="YouTube video player"
                       
@@ -2387,6 +2473,17 @@ const Home = (props) => {
                   </div>
                 </div>
               )}
+              {slide4 && (
+                <div className="proyecto vermasP">
+                  <div data-aos="fade-up" className="medio">
+                    <h2 className="vermasH2">👇💻 Checkea todos mis proyectos 💻👇</h2>
+                    <Link to='/proyectos' className="linkVermas">Todos mis proyectos</Link>
+                  </div>
+                </div>
+              )}
+
+
+
             </div>
             <Footer esp={true}></Footer>
           </div>
@@ -2462,7 +2559,7 @@ const Home = (props) => {
                   </Link>
                   </li>
                   <li>
-                  <Link style={{textDecoration: 'none'}} onClick={handleProyectosM} className="headerMli">
+                  <Link style={{textDecoration: 'none'}} to='/proyectos' className="headerMli">
                     Proyectos
                   </Link>
                   </li>
@@ -2472,6 +2569,15 @@ const Home = (props) => {
                     Contacto
                   </Link>
                   </li>
+                  <li>
+                 <Link style={{textDecoration: 'none'}}
+                    to="/precios"
+                    className="headerMli"
+                    
+                  >
+                    Precios
+                  </Link>
+                 </li>
                  <li>
                  <Link style={{textDecoration: 'none'}}
                     to="/paquetes"
@@ -2534,9 +2640,9 @@ const Home = (props) => {
 
             <div className="aboutM" id="aboutM">
               <div className="txtAboutM">
-                <h2 className="aboutH2M">¿Quien Soy?</h2>
-                <a className="emailM">jmbroggidev@gmail.com</a>
-                <p className="pAboutM">
+                <h2 data-aos="fade-up" className="aboutH2M">¿Quien Soy?</h2>
+                <a data-aos="fade-up" className="emailM">jmbroggidev@gmail.com</a>
+                <p data-aos="fade-up" className="pAboutM">
                 ¡Hola! Me llamo Joaquín y soy un <b>desarrollador y diseñador web</b> Mi enfoque
                   principal es crear sitios web de <b>alta calidad</b> que
                   cumplan con los objetivos específicos de cada uno de mis
@@ -2555,10 +2661,10 @@ const Home = (props) => {
                   <b>la mayor calidad y atención al detalle posible</b>.
                 </p>
                 <div>
-                  <p className="pAboutM2">
+                  <p data-aos="fade-up" className="pAboutM2">
                     Estas son algunas de mis tecnologias favoritas:
                   </p>
-                  <div className="tecnologias">
+                  <div data-aos="fade-up" className="tecnologias">
                     <div className="tecnologia">
                       <img
                         src={require("../img/html5.png")}
@@ -2628,7 +2734,7 @@ const Home = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="botoneraM">
+              <div data-aos="fade-up" className="botoneraM">
                 <button onClick={linkedin} className="boton1M">Checkea MI LinkedIn</button>
                 <button className="boton2M" onClick={handleProyectosM}>Checkea mi Trabajo </button>
               </div>
@@ -2659,8 +2765,7 @@ const Home = (props) => {
                       de vapers en la ciudad de Rosario. A pesar de haber sido
                       diseñado para funcionar al 100%, este proyecto se vio
                       obligado a suspender su actividad debido a la reciente
-                      prohibición del cigarrillo electrónico en Argentina. A
-                      pesar de que actualmente no se encuentra operativo,
+                      prohibición del cigarrillo electrónico en Argentina. Aunque actualmente no se encuentra operativo,
                       Vapearg sigue siendo un buen ejemplo de un ecommerce con
                       un diseño atractivo y una funcionalidad eficiente.
                     </p>
@@ -2747,6 +2852,26 @@ const Home = (props) => {
                   </div>
                 </div>
               )}
+              {slide4 && (
+                <div className="proyecto vermasP">
+                  <div className="textPM">
+                    <div className="flechasDiv">
+                      <span className="flechaIzqM" onClick={backProyecto}>
+                        <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
+                      </span>
+                      <span className="flechaDerM" onClick={nextProyecto}>
+                        <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div data-aos="fade-up" className="medio2">
+                    <h2 className="vermasH2">Checkea todos mis proyectos</h2>
+                   <Link to='/work' className="verTodo">Ver todo</Link>
+                  </div>
+                  </div>
+                  
+                </div>
+              )}
+              
             </div>
 
             <div className="footerMobile" id="contactoM">
@@ -2859,7 +2984,7 @@ const Home = (props) => {
                   </Link>
                   </li>
                   <li>
-                  <Link style={{textDecoration: 'none'}} onClick={handleProyectosM} className="headerMli">
+                  <Link to='/work' style={{textDecoration: 'none'}} className="headerMli">
                     My Work
                   </Link>
                   </li>
@@ -2869,9 +2994,18 @@ const Home = (props) => {
                     Contact me
                   </Link>
                   </li>
+                  <li>
+                 <Link style={{textDecoration: 'none'}}
+                    to="/eng/precios"
+                    className="headerMli"
+                    
+                  >
+                    Prices
+                  </Link>
+                 </li>
                  <li>
                  <Link style={{textDecoration: 'none'}}
-                    to="eng/paquetes"
+                    to="/eng/paquetes"
                     className="headerMli"
                     
                   >
@@ -2931,16 +3065,16 @@ const Home = (props) => {
 
             <div className="aboutM" id="aboutM">
               <div className="txtAboutM">
-                <h2 className="aboutH2M">WHO AM I?</h2>
-                <a className="emailM">jmbroggidev@gmail.com</a>
-                <p className="pAboutM">
+                <h2 data-aos="fade-up" className="aboutH2M">WHO AM I?</h2>
+                <a data-aos="fade-up"  className="emailM">jmbroggidev@gmail.com</a>
+                <p data-aos="fade-up" className="pAboutM">
                 Hi! My name is Joaquín and I'm a <b className="b">web developer and designer</b>. My main focus is on creating high-quality websites that meet each of my clients' specific objectives. I offer <b className="b">highly customizable services</b> to adapt to the needs of each project and ensure customer satisfaction. In addition to my technical programming skills, I have a <b className="b">marketing and design-focused perspective</b>. I am dedicated to creating websites that are not only visually appealing but also effective in promoting my clients' brand and products. I am very dedicated in everything I do and always strive to exceed my clients' expectations. I ensure that each project I work on is designed and developed with the <b className="b">highest quality</b> and <b className="b">attention to detail</b> possible.
                 </p>
                 <div>
-                  <p className="pAboutM2">
+                  <p data-aos="fade-up" className="pAboutM2">
                   These are some of my favorite technologies:
                   </p>
-                  <div className="tecnologias">
+                  <div data-aos="fade-up" className="tecnologias">
                     <div className="tecnologia">
                       <img
                         src={require("../img/html5.png")}
@@ -3010,7 +3144,7 @@ const Home = (props) => {
                   </div>
                 </div>
               </div>
-              <div className="botoneraM">
+              <div data-aos="fade-up" className="botoneraM">
                 <button onClick={linkedin} className="boton1M">Check my LinkedIn</button>
                 <button className="boton2M" onClick={handleProyectosM}> Check my work</button>
               </div>
@@ -3105,6 +3239,25 @@ const Home = (props) => {
                     HTML5, CSS3, VanillaJS.
                     </p>
                   </div>
+                </div>
+              )}
+              {slide4 && (
+                <div className="proyecto vermasP">
+                  <div className="textPM">
+                    <div className="flechasDiv">
+                      <span className="flechaIzqM" onClick={backProyecto}>
+                        <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
+                      </span>
+                      <span className="flechaDerM" onClick={nextProyecto}>
+                        <FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon>
+                      </span>
+                    </div>
+                    <div data-aos="fade-up" className="medio2">
+                    <h2 className="vermasH2"> Check all my projects</h2>
+                   <Link to='/work' className="verTodo">All my projects</Link>
+                  </div>
+                  </div>
+                  
                 </div>
               )}
             </div>

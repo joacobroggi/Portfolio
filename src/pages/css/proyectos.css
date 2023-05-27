@@ -1,0 +1,135 @@
+.workP {
+  background: rgb(15, 14, 14);
+  background: radial-gradient(
+    circle,
+    rgba(15, 14, 14, 1) 0%,
+    rgb(12, 39, 41) 100%
+  );
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.h2Work {
+  font-size: 2.5rem;
+  line-height: calc(var(--vh, 1vh) * 7.5);
+  font-weight: 600;
+  width: 20%;
+  font-family: var(--fuente);
+  color: white;
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 8%;
+  padding-left: 7%;
+  text-decoration: underline;
+  text-decoration-color: var(--color1);
+  padding-bottom: 3%;
+}
+.project {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0 0;
+  height: calc(var(--vh, 1vh) * 45);
+  margin-left: 7%;
+  padding-bottom: 5%;
+}
+.workTitle {
+  font-size: 2rem;
+  margin: 0 0;
+  color: white;
+  font-family: var(--fuente);
+  font-weight: 700;
+  
+}
+.workDesc {
+  font-size: 1rem;
+  margin: 0 0;
+  color: white;
+  font-family: var(--fuente);
+  font-weight: 300;
+}
+.linkW {
+  font-size: 1rem;
+  margin: 0 0;
+  color: white;
+  font-family: var(--fuente);
+  font-weight: 300;
+  text-decoration-color: var(--color1);
+}
+.derTextW {
+  width: 55%;
+  height: 100%;
+}
+.imgIzqW {
+  width: 40%;
+  margin: 0 0;
+  background-position: center;
+  background-size: cover;
+}
+.clima {
+    background-image: url('../../img/lluvia2.jpg');
+}
+.argentina {
+  background-image: url('../../img/argentina.jpg');
+}
+.linkW {
+    transition: 0.2s;
+}
+.linkW:hover {
+
+    color: var(--color1);
+
+}
+
+
+.projectM {
+  display: none;
+}
+@media only screen and (max-width: 850px){ 
+  .projectM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+  }
+  .project {
+    display: none;
+  }
+  .h2WorkM {
+    font-size: 2.5rem;
+    line-height: calc(var(--vh, 1vh) * 7.5);
+    font-weight: 600;
+    width: 20%;
+    font-family: var(--fuente);
+    color: white;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding-top: 15%;
+    padding-left: 7%;
+    text-decoration: underline;
+    text-decoration-color: var(--color1);
+    padding-bottom: 3%;
+  }
+  .textProjectM {
+    width: 84%;
+    margin-bottom: 10%;
+  }
+  .workTitle {
+    font-size: 2rem;
+    margin: 0 0;
+    color: white;
+    font-family: var(--fuente);
+    font-weight: 700;
+    
+  }
+  .imgIzqWM {
+    width: 85%;
+    height: calc(var(--vh, 1vh) * 35);
+    
+    margin: 0 0;
+    margin-bottom: 2%;
+    background-position: center;
+    background-size: cover;
+  }
+}

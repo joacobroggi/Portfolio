@@ -1,0 +1,118 @@
+.pricingCard {
+    width: 28%;
+    background-color: white;
+    min-height: calc(var(--vh, 1vh) * 95);
+    border-radius: 25px;
+    position:relative;
+    margin: 0 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.8s;
+    transform: scale(97%);
+    margin-bottom: 5%;
+}
+.pricingCard:hover {
+    /* transform: scale(103%); */
+   
+  
+}
+.topPricing {
+    background-position: center;
+    background-size: cover;
+    height: 35%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+}
+.landingg {
+    background-image: url('../../img/graphic.jpg');
+}
+.basica {
+    background-image: url('../../img/basica.jpg');
+}
+.h3CatPricing {
+    font-family: var(--public);
+    color: white;
+    margin: 0 0;
+    font-size: 2rem;
+    margin-left: 5%;
+    font-weight: 700;
+}
+.txtPricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.desdeP {
+    font-family: var(--public);
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.69);
+    font-weight: 400;
+}
+.h3Pricing {
+    font-family: var(--public);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.69);
+
+    margin-top: 2%;
+    margin-bottom: 0;
+    letter-spacing: -0.04em;
+}
+.ulPricing {
+    font-family: var(--public);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 0.90);
+    margin-top: 8%;
+    margin-bottom: auto;
+    letter-spacing: -0.04em;
+}
+.liPricing {
+    margin-top: 1.2%;
+}
+.bottomPricing {
+    
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.h3Pricing2 {
+    font-family: var(--public);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color:rgba(0, 0, 0, 0.90);
+    
+    margin-bottom: 3%;
+    letter-spacing: -0.04em;
+}
+.pagosAcep {
+    font-family: var(--public);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 0.90);
+    
+    margin-bottom: 4%;
+}
+.h3Pricing2 {
+    transition: 0.4s;
+    text-decoration-color: transparent;
+}
+.h3Pricing2:hover {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+@media only screen and (max-width: 850px){ 
+    .pricingCard {
+        width: 90%;
+    }
+}

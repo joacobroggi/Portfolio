@@ -298,6 +298,9 @@ background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgba(17,38,40,1) 100%);
 background: rgb(15,14,14);
 background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
 }
+.porQueP {
+  padding-top: 2%;
+}
 .h4pq1 {
   margin-bottom: 0;
   font-family: var(--fuente);
@@ -367,6 +370,14 @@ justify-content: space-between;
   position: absolute;
   right: 10%;
   top: 100%;
+}
+.img-pq2P {
+  /* width: 30vw; */
+  margin-top: 10%;
+  height: 75vh;
+  position: absolute;
+  right: 10%;
+  top: 157%;
 }
 .dot {
   transition: 0.5s;

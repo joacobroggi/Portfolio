@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nerko+One&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nerko+One&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700&family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --chango: 'Chango', cursive;
@@ -10,6 +10,7 @@
     --mplus: 'M PLUS 2', sans-serif;
     --mont: 'Montserrat', sans-serif;
     --hue: 223;
+    --public: 'Public Sans', sans-serif;
 	--bg: #46C2CB;
 	--fg: #46C2CB;
   
@@ -210,7 +211,43 @@ outline: inherit;
     background-size: cover;
   }
 }
+@keyframes bg-in6 {
+  0% {
+    background: #0F0E0E;
+  }
+  100% {
+    background-image: url('./img/artista.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
 
+
+.bgIn8 {
+  -webkit-animation: bg-in4 0.5s linear both;
+	        animation: bg-in4 0.5s linear both;
+}
+
+
+
+@-webkit-keyframes bg-in8 {
+  0% {
+    background: #0F0E0E;
+  }
+ 
+  100% {
+   background: rgb(15,14,14);
+  }
+}
+@keyframes bg-in8 {
+  0% {
+    background: #0F0E0E;
+  }
+  100% {
+    
+        background: radial-gradient(circle, rgba(15,14,14,1) 0%, rgb(12, 39, 41) 100%);
+  }
+}
 
 .text-focus-in {
 	-webkit-animation: text-focus-in 0.6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -519,7 +556,7 @@ opacity: 1;
   
   letter-spacing: .10em; /* Adjust as needed */
   animation: 
-    typing 4.5s steps(40, end),
+    typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
 }
 @keyframes typing {

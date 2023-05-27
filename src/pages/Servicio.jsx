@@ -13,6 +13,8 @@ import {
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Servicio = (props)=> {
     const esp = props.esp;
@@ -34,60 +36,52 @@ const Servicio = (props)=> {
     };
     useEffect(() => {
       handleStart();
+      AOS.init()
     }, []);
+
+    
 
     return (
         <div>
+          {/* ESPAÑOL */}
             {esp && (
               <div>
                 <div className="desk servicios" id="servicios">
-            <header>
-              <ul class="ulHeader">
-                <Link
-                  to="/"
-                  class="liHeader"
-                  
-                >
-                  sobre mí
-                </Link>
-                <Link
-                  to="/"
-                  class="liHeader"
-                  
-                >
-                  proyectos
-                </Link>
-               
-                <Link
-                  to="/"
-                  class="liHeader"
-                  
-                >
-                  contacto
-                </Link>
-                <Link
-                  class="liHeader"
-                  to='/paquetes'
-                >
-                  paquetes
-                </Link>
-                <li class="btnPaquetesHeader"></li>
-              </ul>
-            </header>
+                <header>
+                <ul class="ulHeader">
+                  <Link to="/home" class="liHeader">
+                    sobre mí
+                  </Link>
+                  <Link to="/proyectos" class="liHeader">
+                    proyectos
+                  </Link>
+
+                  <Link to="/home" class="liHeader">
+                    contacto
+                  </Link>
+                  <Link class="liHeader" to="/precios">
+                    precios
+                  </Link>
+                  <Link class="liHeader" to="/paquetes">
+                    paquetes
+                  </Link>
+                  <li class="btnPaquetesHeader"></li>
+                </ul>
+              </header>
             
             <div className="tituloServicios">
-            <h2 className="servicioTitle">Paquete orientado a <u>{props.titulo}</u></h2>
+            <h2 className="servicioTitle"><u>{props.titulo}</u></h2>
             <FontAwesomeIcon className="caretS" icon={faAngleDown}></FontAwesomeIcon>
             </div>
             <img className="imgServicios" src={require('../img/' + props.img)} alt="" />
 
-            <p className="pServicios">{props.descripcion}</p>
+            <p data-aos="fade-up" className="pServicios">{props.descripcion}</p>
             <br />
-            <p className="pServicios">{props.d2} <br /> <br />Para ayudarte a hacer realidad tu sueño, te ofrezco un <b>sistema de afiliación</b> que, si decides adquirirlo, te facilitará muchas tareas, como las actualizaciones futuras de tu sitio web, el registro de un dominio y el pago del servicio de hosting.</p>
+            <p data-aos="fade-up" className="pServicios">{props.d2} <br /> <br />Para ayudarte a hacer realidad tu sueño, te ofrezco un <b>sistema de afiliación</b> que, si decides adquirirlo, te facilitará muchas tareas, como las actualizaciones futuras de tu sitio web, el registro de un dominio y el pago del servicio de hosting.</p>
             
 
             {props.ul && (
-              <h4 className="h4Servicios">{props.ulTitle}</h4>
+              <h4 data-aos="fade-up" className="h4Servicios">{props.ulTitle}</h4>
             )}
             {props.ul}
 
@@ -120,7 +114,7 @@ const Servicio = (props)=> {
                 <ul className="slide-in-left headerMul headerMul2">
                   <li>
                     <Link
-                      to="/"
+                      to="/home"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
@@ -129,7 +123,7 @@ const Servicio = (props)=> {
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/proyectos"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
@@ -138,11 +132,20 @@ const Servicio = (props)=> {
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/home"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
                       Contacto
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/precios"
+                      className="headerMli"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Precios
                     </Link>
                   </li>
                   <li>
@@ -158,7 +161,7 @@ const Servicio = (props)=> {
               </div>
             )}
           <div className="tituloServicios">
-            <h2 className="servicioTitle">Paquete orientado a <u>{props.titulo}</u></h2>
+            <h2 className="servicioTitle"><u>{props.titulo}</u></h2>
             <FontAwesomeIcon className="caretS" icon={faAngleDown}></FontAwesomeIcon>
             </div>
            <div className="centerServicios">
@@ -227,21 +230,21 @@ const Servicio = (props)=> {
           </div>
               </div>
             )}
-
+{/* English */}
             {eng && (
               <div>
                 <div className="desk servicios" id="servicios">
             <header>
               <ul class="ulHeader">
                 <Link
-                  to="/"
+                  to="/eng"
                   class="liHeader"
                   
                 >
                   about me
                 </Link>
                 <Link
-                  to="/"
+                  to="/work"
                   class="liHeader"
                   
                 >
@@ -249,12 +252,15 @@ const Servicio = (props)=> {
                 </Link>
                
                 <Link
-                  to="/"
+                  to="/eng"
                   class="liHeader"
                   
                 >
                   contact me
                 </Link>
+                <Link class="liHeader" to="/eng/precios">
+                    prices
+                  </Link>
                 <Link
                   class="liHeader"
                   to='/eng/paquetes'
@@ -266,7 +272,7 @@ const Servicio = (props)=> {
             </header>
             
             <div className="tituloServicios">
-            <h2 className="servicioTitle">Package oriented towards <u>{props.titulo}</u></h2>
+            <h2 className="servicioTitle"><u>{props.titulo}</u></h2>
             <FontAwesomeIcon className="caretS" icon={faAngleDown}></FontAwesomeIcon>
             </div>
             <img className="imgServicios" src={require('../img/' + props.img)} alt="" />
@@ -310,7 +316,7 @@ const Servicio = (props)=> {
                 <ul className="slide-in-left headerMul headerMul2">
                   <li>
                     <Link
-                      to="/"
+                      to="/eng"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
@@ -319,7 +325,7 @@ const Servicio = (props)=> {
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/work"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
@@ -328,11 +334,20 @@ const Servicio = (props)=> {
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/eng"
                       className="headerMli"
                       style={{ textDecoration: "none" }}
                     >
                       Contact me
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/eng/precios"
+                      className="headerMli"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Prices
                     </Link>
                   </li>
                   <li>
@@ -348,7 +363,7 @@ const Servicio = (props)=> {
               </div>
             )}
           <div className="tituloServicios">
-            <h2 className="servicioTitle">Package oriented towards <u>{props.titulo}</u></h2>
+            <h2 className="servicioTitle"><u>{props.titulo}</u></h2>
             <FontAwesomeIcon className="caretS" icon={faAngleDown}></FontAwesomeIcon>
             </div>
            <div className="centerServicios">
